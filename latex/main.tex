@@ -1,0 +1,84 @@
+\documentclass[b5paper,11bQ,openright,twocolumn]{tondbook}
+%第一引数　用紙サイズ
+%第二引数　フォントサイズ
+%第三引数　右開きを設定
+%第四引数　otfを使う際の設定
+
+\usepackage[expert,deluxe,bold]{otf}
+%\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{ascmac}
+%\usepackage{setspace}
+\usepackage{furikana}
+\usepackage{furiknkt}
+\usepackage[dvips]{graphicx}
+\usepackage{multicol}
+
+\newcommand{\titlename}{流れて私の涙、と千早は言った}
+\newcommand{\chapterone}{}
+\newcommand{\chaptertwo}{}
+
+%file names
+
+%header and footer settings
+\pagestyle{fancy}
+
+%\fancyhead[LO]{\fontsizeVIII\okseries\hspace{-0.5zw}%
+%  {\itshape\thepage} \hspace{0.75zw} \titlename}
+
+\fancyhead[LO]{\fontsizeXI \hspace{-0.5zw}{\fontsizeVIII \thepage}}
+\fancyhead[RO]{}
+\fancyhead[RE]{\fontsizeXI \hspace{0.5zw}{\fontsizeVIII \thepage}}
+\fancyhead[LE]{}
+\renewcommand{\headrulewidth}{0pt}
+
+\kanadashion
+\kanaktdashion
+
+
+% layout
+\setlength{\textwidth}{46.0zw} %一行辺りの文字数
+\setlength{\headwidth}{3.0truemm}
+\setlength{\columnsep}{2.0zw} %二段組時の段間隔
+\setlength{\columnseprule}{0.0pt} %二段組時の段間に入る罫線太さ
+
+%左右の余白設定
+\setlength{\hoffset}{0.0truemm}
+\setlength{\oddsidemargin}{-1.0in} %奇数ページの横マージン
+\advance \oddsidemargin by 11.0truemm
+
+\setlength{\evensidemargin}{-1.0in} %偶数ページの横マージン
+\advance \evensidemargin by 16.0truemm
+
+%上方の余白設定
+\setlength{\voffset}{0.0truemm}
+\setlength{\topmargin}{-1.0in}
+\setlength{\headheight}{10.0truemm}
+\setlength{\headsep}{3.0truemm}
+
+\input{usercommand.tex}
+
+\begin{document}
+
+\bunkohonbunsize
+
+% layout ドキュメント内にかく
+\setlength{\baselineskip}{18.0trueH} %字送りを19Hにする（字送り＝文字幅+行間）
+%\setlength{\textwidth}{40.0zw} %一行辺りの文字数を40文字にする
+\setlength{\parindent}{0.0zw} %インデント高さは手動でいれるので設定しない
+\setlength{\parskip}{0.0zw} %段落の間隔
+\setlength{\columnsep}{0.0zw}
+\setlength{\columnseprule}{0.0pt}
+\setlength{\textheight}{22 \baselineskip} %行数を指定
+\advance \textheight by 1.0zw %行数を+1する
+
+
+\input{../00_表紙.syo}
+\input{../10_一章.syo}
+\input{../20_二章.syo}
+\input{../30_三章.syo}
+\input{../40_エピローグ.syo}
+\input{../90_あとがき.syo}
+
+
+\end{document}

@@ -1,0 +1,11 @@
+#igonore for latex novel
+*.dtx
+*.aux
+*.ent
+*.log
+*.pdf
+*.synctex.gz
+*.toc
+*.ins
+latex/*.txt
+*.bak
